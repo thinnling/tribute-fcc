@@ -64,7 +64,10 @@ p {
   font-size: 1.2em;
   line-height: 1.9em;
   text-align: justify;
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: "Palatino Linotype",
+ "Book Antiqua",
+ Palatino,
+ serif;
   hyphens: auto;
   color: #00021e;
   margin: 1.5em 0;
