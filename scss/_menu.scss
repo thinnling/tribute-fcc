@@ -1,0 +1,37 @@
+// nav
+.nav-container {
+    display: block;
+
+    #nav {
+        visibility: visible;
+        width: 100%;
+        position: absolute;
+        display: grid;
+        align-items: center;
+        background-color: darken($base-color, 44%);
+        padding: .6em;
+
+        .logo {
+            position: absolute;
+            left: 1em;
+            // top: .8em;
+            width: 2.5em;
+            height: auto;
+            z-index: 1;
+        }
+
+        ul {
+            display: grid;
+            justify-items: center;
+            justify-content: center;
+            grid-template-columns: repeat(4, 10em);
+
+            a {
+                font-size: .8em;
+                font-weight: 900;
+                font-family: 'Poppins', sans-serif;
+                letter-spacing: 3px;
+            }
+        }            
+    }
+}      
