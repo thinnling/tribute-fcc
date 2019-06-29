@@ -1,5 +1,11 @@
 $base-color: #00f; // Pure blue
+$tertriary-color: #fbfb00; // Deep yellow
 
-$primary-color: #000c34;
-$secondary-color: #efefee;
 
+$primary-color: #000c32;
+$secondary-color: #eeeee5;
+
+
+@mixin easeOut {
+	transition: all .4s ease-out;
+}
