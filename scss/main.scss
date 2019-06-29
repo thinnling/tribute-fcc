@@ -1,11 +1,6 @@
 @import '_config';
 @import '_menu';
 
-
-/*  font-family: 'Playfair Display', serif;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Poppins', sans-serif;*/
-
     * {
         margin: 0;
         padding: 0;
@@ -17,7 +12,9 @@
     
     body {
         margin: auto;
-        background-color: $primary-color; 
+        background-color: rgba(darken($base-color, 50%), .1);
+        width: 100%;
+        position: relative;
     }
 
     // Headers
@@ -31,7 +28,7 @@
         font-weight: 600;
         text-transform: uppercase;
         font-family: 'Poppins', sans-serif;
-        color: $primary-text-color;
+        color: $primary-color;
     }
     
     h2 {
@@ -39,7 +36,7 @@
         word-spacing: .1em;
         letter-spacing: .0em;
     }
-    
+     
     p {
         font-size: 1.2em;
         line-height: 1.9em;
@@ -49,7 +46,7 @@
             Palatino,
             serif;
         hyphens: auto;
-        color: $primary-text-color;
+        color: $primary-color;
         margin: 1.5em 0;
         word-spacing: .3em;
     } 
@@ -69,7 +66,7 @@
     }
     
     a:link {
-        color: $secondary-color;
+        color: #fff;
     } 
     
     a:visited {
@@ -104,31 +101,33 @@
                 display: block;
                 height: 100vh;
             }
-
-            h1 {
-                font-size: 3em;
-                color: $secondary-color;
-                hyphens: auto;
-                letter-spacing: 3px;
-                margin-top: 0;
-                padding: .9em .1em;
-                margin: auto;
-            }
         } 
     } 
 
     // main
     #main {
-        margin-top: 5em;
+        padding-top: 5em;
+        width: 70%;
+        margin: auto;  
 
         section {
             overflow: auto;
             padding: 3em;
             background-color: $secondary-color;
-            margin: 1em 10em;
+            margin: 5em 0;
 
             &:first-child {
                 margin-top: 0;
+            }
+
+            h1 {
+                font-size: 3em;
+                color: $primary-color;
+                hyphens: auto;
+                letter-spacing: 3px;
+                margin-top: 0;
+                padding: .9em .1em;
+                margin: auto;
             }
     
             h2 {
@@ -136,7 +135,7 @@
             }
 
             a {
-                color: blue;
+                color: $base-color;
             }
 
             &.turn-of-century {
@@ -178,11 +177,12 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
-        background-color: $primary-color;
+        background-color: darken($base-color, 44%);
         margin: 0;
         padding: 0;
         align-items: center;
         grid-auto-rows: 4em;
+        margin-top: 5em;
 
         .logo {
         width: 3em;
@@ -192,11 +192,10 @@
         .copyright p,
         .company-name p {
             text-transform: uppercase;
-            color: $secondary-color;
+            color: #fff;
             font-size: .7em;
         }
     }
-
     
 @import '_mobile';
     

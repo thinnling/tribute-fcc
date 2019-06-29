@@ -4,12 +4,12 @@
 
     #nav {
         visibility: visible;
-        width: 100%;
         position: absolute;
         display: grid;
         align-items: center;
-        background-color: darken($base-color, 44%);
-        padding: .6em;
+        background-color: rgba(darken($base-color, 48%), .8);
+        padding: .6em 0;
+        width: 100%;
 
         .logo {
             position: absolute;
@@ -25,6 +25,7 @@
             justify-items: center;
             justify-content: center;
             grid-template-columns: repeat(4, 10em);
+            width: 100%;
 
             a {
                 font-size: .8em;

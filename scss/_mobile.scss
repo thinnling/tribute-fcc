@@ -13,31 +13,39 @@
     }
 
     // Navigation    
-    #nav {
+    .nav-container {
+        display: none;
 
-        .logo {
-            position: absolute !important;
-            top: -9999px !important;
-            left: -9999px !important;
-        }
-    }  
+        #nav {
+
+            .logo {
+                position: absolute !important;
+                top: -9999px !important;
+                left: -9999px !important;
+            }
+        }  
+    }   
     
     // Header
-    header#hero {
-        h1 {
-            font-size: 2em;
-            color: $secondary-color;
-            hyphens: auto;
-            letter-spacing: 3px;
-            margin-top: 0;
-            padding: .9em .1em;
-            margin: auto;
-            height: 100%;
-        }
-    }
+    // header#hero {
+       
+    // }
     
     #main {
+        width: 90vw;
         section {
+
+            h1 {
+                font-size: 2em;
+                color: $primary-color;
+                hyphens: auto;
+                letter-spacing: 3px;
+                margin-top: 0;
+                padding: .9em .1em;
+                margin: auto;
+                height: 100%;
+            }
+
             &.turn-of-century {
                 img.construction-man-image {
                     float: right;
@@ -81,7 +89,6 @@
         display: grid;
         grid-template-columns: 1fr;
         justify-items: center;
-        background-color: $primary-color;
         margin: 0;
         padding: 0;
         align-items: center;
@@ -105,7 +112,6 @@
         .company-name {
             p {                    
                 text-transform: uppercase;
-                color: $secondary-color;
                 font-size: 1.1em;
                 letter-spacing: 2px;
             }
@@ -116,12 +122,13 @@
 @media only screen and (max-width: 500px) {
 
     body {
-        width: 100%;
+        width: 100vw;
     }
 
     // Global
     h1 {
         font-size: 1.3em;
+        color: $primary-color;
     }
 
     img {
@@ -131,25 +138,32 @@
         min-width: 85vw;
     }  
 
+    
+
+    .banner-image {
+        border: none;
+    }
+
     // Main
     #main {
+        width: 100%;
         section {
             padding: 0;
-            margin: 1em;
             display: grid;
             grid-template-columns: 1fr;
+            margin: .5em .2em;
 
-                h2 {
-                    font-size: 1.8em;
-                    padding: 1em 0;
-                    margin: 0;
-                }
-            
-                p {
-                    word-spacing: 0;
-                    padding: 0 1em;
-                    font-size: 1.2em;  
-                }
+            h2 {
+                font-size: 1.8em;
+                padding: 1em 0;
+                margin: 0;
+            }
+        
+            p {
+                word-spacing: 0;
+                padding: 0 1em;
+                font-size: 1.2em;  
+            }
 
             &.turn-of-century {
                 .construction-man-image {                       
