@@ -2,12 +2,12 @@
   display: block; }
   .nav-container #nav {
     visibility: visible;
-    width: 100%;
     position: absolute;
     display: grid;
     align-items: center;
-    background-color: #00001f;
-    padding: .6em; }
+    background-color: rgba(0, 0, 10, 0.8);
+    padding: .6em 0;
+    width: 100%; }
     .nav-container #nav .logo {
       position: absolute;
       left: 1em;
@@ -18,16 +18,14 @@
       display: grid;
       justify-items: center;
       justify-content: center;
-      grid-template-columns: repeat(4, 10em); }
+      grid-template-columns: repeat(4, 10em);
+      width: 100%; }
       .nav-container #nav ul a {
         font-size: .8em;
         font-weight: 900;
         font-family: 'Poppins', sans-serif;
         letter-spacing: 3px; }
 
-/*  font-family: 'Playfair Display', serif;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Poppins', sans-serif;*/
 * {
   margin: 0;
   padding: 0; }
@@ -37,7 +35,9 @@ html {
 
 body {
   margin: auto;
-  background-color: #000c34; }
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: relative; }
 
 h1,
 h2,
@@ -49,7 +49,7 @@ h6 {
   font-weight: 600;
   text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
-  color: #333; }
+  color: #000c34; }
 
 h2 {
   font-size: 2em;
@@ -62,7 +62,7 @@ p {
   text-align: justify;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   hyphens: auto;
-  color: #333;
+  color: #000c34;
   margin: 1.5em 0;
   word-spacing: .3em; }
 
@@ -78,7 +78,7 @@ a {
   letter-spacing: .05em; }
 
 a:link {
-  color: #efefee; }
+  color: #fff; }
 
 a:visited {
   color: #fff; }
@@ -104,28 +104,30 @@ header#hero {
     object-fit: cover;
     display: block;
     height: 100vh; }
-  header#hero h1 {
-    font-size: 3em;
-    color: #efefee;
-    hyphens: auto;
-    letter-spacing: 3px;
-    margin-top: 0;
-    padding: .9em .1em;
-    margin: auto; }
 
 #main {
-  margin-top: 5em; }
+  padding-top: 5em;
+  width: 70%;
+  margin: auto; }
   #main section {
     overflow: auto;
     padding: 3em;
     background-color: #efefee;
-    margin: 1em 10em; }
+    margin: 5em 0; }
     #main section:first-child {
       margin-top: 0; }
+    #main section h1 {
+      font-size: 3em;
+      color: #000c34;
+      hyphens: auto;
+      letter-spacing: 3px;
+      margin-top: 0;
+      padding: .9em .1em;
+      margin: auto; }
     #main section h2 {
       margin-bottom: .5em; }
     #main section a {
-      color: blue; }
+      color: #00f; }
     #main section.turn-of-century .construction-man-image {
       float: right;
       max-width: 231px;
@@ -148,18 +150,19 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
-  background-color: #000c34;
+  background-color: #00001f;
   margin: 0;
   padding: 0;
   align-items: center;
-  grid-auto-rows: 4em; }
+  grid-auto-rows: 4em;
+  margin-top: 5em; }
   footer .logo {
     width: 3em;
     height: auto; }
   footer .copyright p,
   footer .company-name p {
     text-transform: uppercase;
-    color: #efefee;
+    color: #fff;
     font-size: .7em; }
 
 @media only screen and (max-width: 850px) {
@@ -173,45 +176,48 @@ footer {
     margin: 1.5em 0;
     word-spacing: .2em;
     hyphens: auto; }
-  #nav .logo {
-    position: absolute !important;
-    top: -9999px !important;
-    left: -9999px !important; }
-  header#hero h1 {
-    font-size: 2em;
-    color: #efefee;
-    hyphens: auto;
-    letter-spacing: 3px;
-    margin-top: 0;
-    padding: .9em .1em;
-    margin: auto;
-    height: 100%; }
-  #main section.turn-of-century img.construction-man-image {
-    float: right;
-    max-width: 245px;
-    shape-outside: polygon(18.13% 15.6%, -1.58% 54.62%, 27.9% 55.53%, 43.99% 97.58%, 44.59% -1.18%);
-    margin-bottom: 1.4em;
-    margin-left: .2em; }
-  #main section.rc-section img.rc-image {
-    float: left;
-    max-width: 200px;
-    shape-outside: polygon(68.81% 17.2%, 103.58% 46.57%, 91.13% 97.36%, 54.91% -1.19%); }
-  #main section.post-ww2-section img.post-ww2-image {
-    float: right;
-    max-width: 200px;
-    shape-outside: polygon(37.15% 11.14%, 33.21% 36.13%, 4.1% 71.02%, 42.38% 107.35%, 55.08% -2.89%);
-    margin: 0 1em; }
-  #main section.two-thousands-section img.internet-image {
-    float: left;
-    max-width: 130px;
-    shape-outside: polygon(81.85% 23.17%, 103.88% 72.46%, 63.69% 105.19%, 57.87% -16.03%);
-    margin-left: -.7em; }
+  .nav-container {
+    display: none; }
+    .nav-container #nav .logo {
+      position: absolute !important;
+      top: -9999px !important;
+      left: -9999px !important; }
+  #main {
+    width: 90vw; }
+    #main section h1 {
+      font-size: 2em;
+      color: #000c34;
+      hyphens: auto;
+      letter-spacing: 3px;
+      margin-top: 0;
+      padding: .9em .1em;
+      margin: auto;
+      height: 100%; }
+    #main section.turn-of-century img.construction-man-image {
+      float: right;
+      max-width: 245px;
+      shape-outside: polygon(18.13% 15.6%, -1.58% 54.62%, 27.9% 55.53%, 43.99% 97.58%, 44.59% -1.18%);
+      margin-bottom: 1.4em;
+      margin-left: .2em; }
+    #main section.rc-section img.rc-image {
+      float: left;
+      max-width: 200px;
+      shape-outside: polygon(68.81% 17.2%, 103.58% 46.57%, 91.13% 97.36%, 54.91% -1.19%); }
+    #main section.post-ww2-section img.post-ww2-image {
+      float: right;
+      max-width: 200px;
+      shape-outside: polygon(37.15% 11.14%, 33.21% 36.13%, 4.1% 71.02%, 42.38% 107.35%, 55.08% -2.89%);
+      margin: 0 1em; }
+    #main section.two-thousands-section img.internet-image {
+      float: left;
+      max-width: 130px;
+      shape-outside: polygon(81.85% 23.17%, 103.88% 72.46%, 63.69% 105.19%, 57.87% -16.03%);
+      margin-left: -.7em; }
   /*Footer*/
   footer {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
-    background-color: #000c34;
     margin: 0;
     padding: 0;
     align-items: center;
@@ -227,50 +233,54 @@ footer {
     footer .copyright p,
     footer .company-name p {
       text-transform: uppercase;
-      color: #efefee;
       font-size: 1.1em;
       letter-spacing: 2px; } }
 
 @media only screen and (max-width: 500px) {
   body {
-    width: 100%; }
+    width: 100vw; }
   h1 {
-    font-size: 1.3em; }
+    font-size: 1.3em;
+    color: #000c34; }
   img {
     display: block;
     background-color: #fffb6e6e;
     border: 1px solid #d8d20d;
     min-width: 85vw; }
-  #main section {
-    padding: 0;
-    margin: 1em;
-    display: grid;
-    grid-template-columns: 1fr; }
-    #main section h2 {
-      font-size: 1.8em;
-      padding: 1em 0;
-      margin: 0; }
-    #main section p {
-      word-spacing: 0;
-      padding: 0 1em;
-      font-size: 1.2em; }
-    #main section.turn-of-century .construction-man-image {
-      width: 100%;
-      shape-outside: none;
+  .banner-image {
+    border: none; }
+  #main {
+    width: 100%; }
+    #main section {
       padding: 0;
-      justify-self: center; }
-    #main section.rc-section .rc-image {
-      width: 100%;
-      shape-outside: none;
-      justify-self: center;
-      padding: 0; }
-    #main section.post-ww2-section .post-ww2-image {
-      width: 100%;
-      shape-outside: none;
-      justify-self: center;
-      padding: 0; }
-    #main section.two-thousands-section .internet-image {
-      min-width: 75%;
-      shape-outside: none;
-      border-radius: 50%;
-      justify-self: center; } }
+      display: grid;
+      grid-template-columns: 1fr;
+      margin: .5em .2em; }
+      #main section h2 {
+        font-size: 1.8em;
+        padding: 1em 0;
+        margin: 0; }
+      #main section p {
+        word-spacing: 0;
+        padding: 0 1em;
+        font-size: 1.2em; }
+      #main section.turn-of-century .construction-man-image {
+        width: 100%;
+        shape-outside: none;
+        padding: 0;
+        justify-self: center; }
+      #main section.rc-section .rc-image {
+        width: 100%;
+        shape-outside: none;
+        justify-self: center;
+        padding: 0; }
+      #main section.post-ww2-section .post-ww2-image {
+        width: 100%;
+        shape-outside: none;
+        justify-self: center;
+        padding: 0; }
+      #main section.two-thousands-section .internet-image {
+        min-width: 75%;
+        shape-outside: none;
+        border-radius: 50%;
+        justify-self: center; } }
