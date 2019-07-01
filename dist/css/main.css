@@ -156,10 +156,13 @@ footer {
   align-items: center;
   grid-auto-rows: 4em;
   margin-top: 5em;
-  margin-bottom: -1px; }
+  margin-bottom: -1px;
+  height: 5em; }
   footer .logo {
     width: 3em;
     height: auto; }
+    footer .logo img {
+      min-width: 3em; }
   footer .copyright p,
   footer .company-name p {
     text-transform: uppercase;
@@ -302,24 +305,24 @@ footer {
     margin: 0;
     padding: 0;
     align-items: center;
-    grid-auto-rows: 4em; }
+    grid-auto-rows: 4em;
+    height: 100%; }
     footer .copyright {
-      order: 2; }
-    footer .logo {
-      width: 3em;
-      height: auto;
-      display: none; }
-    footer .company-name {
       order: 1; }
+    footer .logo {
+      order: 2; }
+      footer .logo img {
+        background-color: transparent;
+        border: none;
+        min-width: 7vw; }
+    footer .company-name {
+      order: 3; }
     footer .copyright p,
     footer .company-name p {
       text-transform: uppercase;
-      font-size: 1.1em;
       letter-spacing: 2px; } }
 
 @media only screen and (max-width: 500px) {
-  body {
-    width: 100vw; }
   h1 {
     font-size: 1.3em;
     color: #000c32; }
