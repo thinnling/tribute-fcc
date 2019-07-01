@@ -26,6 +26,30 @@
         font-family: 'Poppins', sans-serif;
         letter-spacing: 3px; }
 
+.btn-overlay {
+  position: fixed;
+  bottom: 2em;
+  right: 1em;
+  z-index: 3; }
+  .btn-overlay .fa-caret-square-up {
+    color: #777; }
+
+.back-to-top {
+  position: fixed;
+  opacity: .11;
+  bottom: 2em;
+  right: 1.2em;
+  padding: 1.6em;
+  z-index: 4;
+  cursor: pointer;
+  background-color: yellow; }
+
+/* Animations */
+.btnEntrance {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: btnEntrance; }
+
 * {
   margin: 0;
   padding: 0; }
