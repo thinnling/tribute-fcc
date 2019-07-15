@@ -205,4 +205,8 @@ footer {
     }
 }
 
+.close-mobile-nav {
+    transform: translateX(-500px);
+}
+
 @import '_mobile';

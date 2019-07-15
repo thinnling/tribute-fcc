@@ -1,6 +1,9 @@
 @media only screen and (max-width: 850px) {
 
     
+    .hide {
+        display: none;
+    }
 
     /*Global*/
     p {
@@ -39,7 +42,7 @@
                 .btn-line {
                     width: 2em;
                     height: 3px;
-                    margin: 0 0 5px 0;
+                    margin: 0 0 4px 0;
                     background: #fff;
                     @include easeOut;
                     border-top: 1.5px solid #999;
@@ -244,9 +247,9 @@
 
 @media only screen and (max-width: 500px) {
 
-    body {
+    // body {
         // width: 90vw;
-    }
+    // }
 
     // Global
     h1 {

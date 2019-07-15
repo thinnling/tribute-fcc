@@ -30,13 +30,11 @@ function backToTop() {
     window.scrollTo(0,0);
 }
 
-
-
 function smoothScrollBackToTop() {
   const targetPosition = 0;
   const startPosition = window.pageYOffset;
   const distance = targetPosition - startPosition;
-  const duration = 750;
+  const duration = 250;
   let start = null;
   
   window.requestAnimationFrame(step);
@@ -50,24 +48,26 @@ function smoothScrollBackToTop() {
 }
 
 function easeInOutCubic(t, b, c, d) {
-	t /= d/2;
-	if (t < 1) return c/2*t*t*t + b;
+	t /= d/20;
+	if (t < 1) return c*t*t*t + b;
 	t -= 2;
 	return c/2*(t*t*t + 2) + b;
 };
 
+// ////////////////////////////////////////////////////////////////////////
 
-//Hamburger dropdown
-// Select DOM Items
+// //Hamburger dropdown
+// // Select DOM Items
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
 const navItem = document.querySelectorAll('.nav-item');
 
-// Set Initial State of the Menu
+// // Set Initial State of the Menu
 let showMenu = false;
 
 menuBtn.addEventListener('click', toggleMenu);
+
  function toggleMenu() {
      if(!showMenu) {
          menuBtn.classList.add('close');
@@ -75,7 +75,7 @@ menuBtn.addEventListener('click', toggleMenu);
          menuNav.classList.add('show');
          navItem.forEach(item => item.classList.add('show'));
      
-        // Set Menu State
+//         // Set Menu State
         showMenu = true;
         } else {
             menuBtn.classList.remove('close');
@@ -83,7 +83,29 @@ menuBtn.addEventListener('click', toggleMenu);
             menuNav.classList.remove('show');
             navItem.forEach(item => item.classList.remove('show'));
 
-            //Set Menu State
+//             //Set Menu State
             showMenu = false;
      }
  }
+
+//////////////////////////////////////////////////////////////////
+
+// Hide Mobile Nav after anchor link is clicked
+// // // Select DOM Items
+const navContainer = document.querySelector('.nav-container');
+const navLink = document.querySelector('.nav-link');
+const nav = document.querySelector('#nav');
+
+menuNav.addEventListener('click', navClose);
+
+function navClose() {    
+
+    if(showMenu) {
+
+        menuBtn.classList.remove('close');
+        menuNav.classList.remove('show');   
+        navItem.forEach(item => item.classList.add('show'));
+
+        showMenu = false;        
+    } 
+}
