@@ -197,6 +197,8 @@ footer {
   transform: translateX(-500px); }
 
 @media only screen and (max-width: 850px) {
+  .hide {
+    display: none; }
   /*Global*/
   p {
     font-size: 1.3em;
@@ -223,7 +225,7 @@ footer {
       .nav-container #nav .menu-btn .btn-line {
         width: 2em;
         height: 3px;
-        margin: 0 0 5px 0;
+        margin: 0 0 4px 0;
         background: #fff;
         transition: all .4s ease-out;
         border-top: 1.5px solid #999; }

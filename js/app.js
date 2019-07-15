@@ -49,7 +49,7 @@ function smoothScrollBackToTop() {
 
 function easeInOutCubic(t, b, c, d) {
 	t /= d/20;
-	if (t < 1) return c/2*t*t*t + b;
+	if (t < 1) return c*t*t*t + b;
 	t -= 2;
 	return c/2*(t*t*t + 2) + b;
 };
@@ -90,26 +90,22 @@ menuBtn.addEventListener('click', toggleMenu);
 
 //////////////////////////////////////////////////////////////////
 
-// Select DOM Items
-const navLinks = document.querySelector('.nav-link');
+// Hide Mobile Nav after anchor link is clicked
+// // // Select DOM Items
+const navContainer = document.querySelector('.nav-container');
+const navLink = document.querySelector('.nav-link');
+const nav = document.querySelector('#nav');
 
+menuNav.addEventListener('click', navClose);
 
-let togglesS = true;
+function navClose() {    
 
-//  // Mobile Nav disappears after user clicks a link
- navLinks.addEventListener('click', closeMenu);
+    if(showMenu) {
 
- function closeMenu() {
-    if (togglesS) {
-        menuNav.style.display = 'none';
         menuBtn.classList.remove('close');
-    }   
- }
- 
- menuBtn.addEventListener('click', openMenu);
+        menuNav.classList.remove('show');   
+        navItem.forEach(item => item.classList.add('show'));
 
- function openMenu() {
-     if (menuNav.style.display = 'none') {
-        menuNav.style.display = 'flex';
-     }
- }
+        showMenu = false;        
+    } 
+}
